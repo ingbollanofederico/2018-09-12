@@ -58,5 +58,12 @@ public class Model {
 		Collections.sort(correlatedNercs);
 		return correlatedNercs;
 	}
+	
+	
+	public void simula(int k) {
+		Simulatore sim = new Simulatore();
+		sim.init(k, dao.loadAllPowerOutages(nIdMap), nIdMap, this.graph);
+		sim.run();
+	}
 
 }

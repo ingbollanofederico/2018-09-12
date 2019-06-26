@@ -3,11 +3,14 @@ package it.polito.tdp.poweroutages.model;
 public class Nerc {
 	private int id;
 	private String value;
+	private Boolean staPrestanzo;
 
 	public Nerc(int id, String value) {
 		this.id = id;
 		this.value = value;
+		this.staPrestanzo = false;
 	}
+	
 
 	public int getId() {
 		return id;
@@ -24,6 +27,18 @@ public class Nerc {
 	public void setValue(String value) {
 		this.value = value;
 	}
+
+	
+	
+	public Boolean getStaPrestanzo() {
+		return staPrestanzo;
+	}
+
+
+	public void setStaPrestanzo(Boolean staPrestanzo) {
+		this.staPrestanzo = staPrestanzo;
+	}
+
 
 	@Override
 	public int hashCode() {
